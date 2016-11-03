@@ -1,0 +1,6 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.4)
+SET(CCL_LIB_SRC bst.c  ccl_get.c  ccl_iterate.c  ccl_parse.c  ccl_release.c  ccl_reset.c  ccl_set.c)
+SET(CMAKE_INSTALL_PREFIX /tmp/test)
+ADD_LIBRARY(ccl SHARED ${CCL_LIB_SRC})
+INSTALL(TARGETS ccl LIBRARY DESTINATION lib)
+INSTALL(FILES ccl.h bst.h DESTINATION include)
